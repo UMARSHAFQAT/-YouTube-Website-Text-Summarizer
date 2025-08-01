@@ -55,7 +55,7 @@ if summarize_button:
                         chain = load_summarize_chain(llm, chain_type="map_reduce")
                         st.info(f"Using MAP-REDUCE method ({total_words} words)")
 
-                    summary = chain.run(documents)
+                    summary = chain.invoke(documents)
                     st.success("✅ Summary:")
                     st.write(summary)
 
